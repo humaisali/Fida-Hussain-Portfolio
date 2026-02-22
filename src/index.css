@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap");
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+
+/* ─── CSS Variables ─── */
+:root {
+  --accent: #50c878;
+  --accent-rgb: 80, 200, 120;
+  --glow-soft: rgba(80, 200, 120, 0.3);
+  --glow-mid: rgba(80, 200, 120, 0.6);
+  --glow-strong: rgba(80, 200, 120, 0.9);
+}
+
+/* ─── Base ─── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans;
+  }
+
+  /* Dark Mode Body */
+  .dark body {
+    @apply bg-black text-white;
+  }
+
+  /* Light Mode Body */
+  body {
+    @apply bg-zinc-50 text-zinc-900;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--glow-mid);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+  }
+}
+
+/* ─── Utilities ─── */
+@layer utilities {
+  /* Glow text */
+  .text-glow {
+    text-shadow: 0 0 20px rgba(80, 200, 120, 0.6);
+  }
+
+  /* Glowing underline for headings */
+  .heading-underline {
+    position: relative;
+    display: inline-block;
+  }
+  .heading-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: var(--accent);
+    box-shadow: 0 0 12px var(--glow-mid), 0 0 24px var(--glow-soft);
+    border-radius: 2px;
+  }
+
+  /* Glow border utility */
+  .glow-border {
+    border: 1px solid rgba(80, 200, 120, 0.3);
+    box-shadow: 0 0 15px rgba(80, 200, 120, 0.15),
+      inset 0 0 15px rgba(80, 200, 120, 0.03);
+  }
+  .glow-border:hover {
+    border-color: rgba(80, 200, 120, 0.6);
+    box-shadow: 0 0 25px rgba(80, 200, 120, 0.35),
+      inset 0 0 20px rgba(80, 200, 120, 0.05);
+  }
+
+  /* Glow divider */
+  .glow-divider {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--accent),
+      transparent
+    );
+    box-shadow: 0 0 8px var(--glow-soft);
+  }
+
+  /* Section label */
+  .section-label {
+    @apply uppercase tracking-[0.2em] text-sm font-mono font-medium;
+    color: var(--accent);
+  }
+
+  /* Accent button */
+  .btn-accent {
+    @apply px-6 py-3 font-semibold rounded-lg transition-all duration-300 text-black;
+    background-color: var(--accent);
+    box-shadow: 0 0 15px rgba(80, 200, 120, 0.4);
+  }
+  .btn-accent:hover {
+    box-shadow: 0 0 30px rgba(80, 200, 120, 0.8);
+    transform: translateY(-1px);
+  }
+
+  /* Outline button */
+  .btn-outline {
+    @apply px-6 py-3 font-semibold rounded-lg transition-all duration-300;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+  }
+  .btn-outline:hover {
+    background-color: rgba(80, 200, 120, 0.08);
+    box-shadow: 0 0 20px rgba(80, 200, 120, 0.3);
+    transform: translateY(-1px);
+  }
+}
+
+/* ─── Light mode overrides ─── */
+body:not(.dark) .glow-border {
+  border-color: rgba(80, 200, 120, 0.4);
+  box-shadow: 0 0 12px rgba(80, 200, 120, 0.1);
+}
+
+/* Selection color */
+::selection {
+  background: rgba(80, 200, 120, 0.25);
+  color: inherit;
+}
+
+
+
