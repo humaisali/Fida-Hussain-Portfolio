@@ -1,3 +1,5 @@
+// Testimonial Section
+
 import { useEffect, useRef, useState } from "react";
 import { useTheme } from "../context/ThemeContext";
 
@@ -124,7 +126,7 @@ function TestimonialCard({ testimonial, isDark, active }) {
       <div className="flex items-center gap-4">
         {/* Avatar */}
         <div
-          className={`w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 font-mono font-bold text-sm
+        className={`w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 font-sans font-bold text-sm
             ${isDark ? "bg-zinc-900" : "bg-zinc-100"}`}
           style={{
             border: "2px solid rgba(80,200,120,0.4)",
@@ -140,7 +142,7 @@ function TestimonialCard({ testimonial, isDark, active }) {
           <span className={`font-semibold text-base ${isDark ? "text-white" : "text-zinc-900"}`}>
             {name}
           </span>
-          <span className={`text-xs font-mono ${isDark ? "text-gray-500" : "text-zinc-500"}`}>
+          <span className={`text-xs font-sans ${isDark ? "text-gray-500" : "text-zinc-500"}`}>
             {title} · {company}
           </span>
         </div>
@@ -148,7 +150,7 @@ function TestimonialCard({ testimonial, isDark, active }) {
         {/* Project badge */}
         <div className="hidden ml-auto sm:block">
           <span
-            className="text-[10px] font-mono px-3 py-1.5 rounded-full"
+            className="text-[10px] font-sans px-3 py-1.5 rounded-full"
             style={{
               border: "1px solid rgba(80,200,120,0.3)",
               color: "var(--accent)",
@@ -190,8 +192,8 @@ function ThumbCard({ testimonial, isDark, active, onClick, delay }) {
       }}
     >
       {/* Avatar */}
-      <div
-        className={`w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 font-mono font-bold text-xs
+        <div
+      className={`w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 font-sans font-bold text-xs
           ${isDark ? "bg-zinc-900" : "bg-zinc-100"}`}
         style={{
           border: `2px solid ${active ? "var(--accent)" : "rgba(80,200,120,0.25)"}`,
@@ -205,7 +207,7 @@ function ThumbCard({ testimonial, isDark, active, onClick, delay }) {
         <span className={`text-sm font-semibold truncate ${isDark ? "text-white" : "text-zinc-900"}`}>
           {name}
         </span>
-        <span className={`text-[11px] font-mono truncate ${isDark ? "text-gray-600" : "text-zinc-500"}`}>
+        <span className={`text-[11px] font-sans truncate ${isDark ? "text-gray-600" : "text-zinc-500"}`}>
           {company}
         </span>
       </div>
@@ -319,12 +321,12 @@ export default function Testimonials() {
               {Array.from({ length: 5 }).map((_, i) => <StarIcon key={i} />)}
             </div>
             <p
-              className="font-mono text-xl font-bold"
+              className="font-sans text-xl font-bold"
               style={{ color: "var(--accent)", textShadow: "0 0 12px rgba(80,200,120,0.4)" }}
             >
               5.0
             </p>
-            <p className={`text-xs font-mono mt-1 ${isDark ? "text-gray-600" : "text-zinc-500"}`}>
+            <p className={`text-xs font-sans mt-1 ${isDark ? "text-gray-600" : "text-zinc-500"}`}>
               Average Client Rating
             </p>
             <div
@@ -410,7 +412,7 @@ export default function Testimonials() {
               </button>
 
               {/* Counter */}
-              <span className={`ml-auto font-mono text-sm ${isDark ? "text-gray-600" : "text-zinc-400"}`}>
+              <span className={`ml-auto font-sans text-sm ${isDark ? "text-gray-600" : "text-zinc-400"}`}>
                 <span style={{ color: "var(--accent)" }}>{String(active + 1).padStart(2, "0")}</span>
                 {" / "}
                 {String(TESTIMONIALS.length).padStart(2, "0")}

@@ -350,7 +350,7 @@ export default function Skills() {
                 >
                   <Icon />
                 </div>
-                <span className={`text-xs font-mono ${isDark ? "text-gray-500" : "text-zinc-500"}`}>
+            <span className={`text-xs font-sans ${isDark ? "text-gray-500" : "text-zinc-500"}`}>
                   {name}
                 </span>
               </div>

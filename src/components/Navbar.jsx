@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useTheme } from "../context/ThemeContext";
 
 const NAV_LINKS = [
-  { label: "Home", href: "#home" },
+  { label: "Home", href: "#hero" },
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
@@ -100,7 +100,7 @@ export default function Navbar() {
         <a
           href="#hero"
           onClick={() => handleNavClick("#hero")}
-          className="font-mono text-lg font-semibold tracking-tight transition-all duration-300"
+          className="font-sans text-lg font-semibold tracking-tight transition-all duration-300"
           style={{ color: "var(--accent)", textShadow: "0 0 12px rgba(80,200,120,0.5)" }}
         >
           FH<span className={isDark ? "text-white" : "text-zinc-900"}>.copy</span>
@@ -115,7 +115,7 @@ export default function Navbar() {
               <button
                 key={label}
                 onClick={() => handleNavClick(href)}
-                className={`font-mono text-sm tracking-wide transition-all duration-300 relative ${
+                className={`font-sans text-sm tracking-wide transition-all duration-300 relative ${
                   isActive
                     ? "text-[color:var(--accent)]"
                     : isDark
@@ -138,7 +138,7 @@ export default function Navbar() {
         {/* Right Controls */}
         <div className="flex items-center gap-3">
           {/* Theme Toggle */}
-          <button
+          {/* <button
             onClick={toggleTheme}
             className={`p-2 rounded-lg transition-all duration-300 ${
               isDark
@@ -148,7 +148,7 @@ export default function Navbar() {
             aria-label="Toggle theme"
           >
             {isDark ? <SunIcon /> : <MoonIcon />}
-          </button>
+          </button> */}
 
           {/* Hire Me CTA */}
           <a
@@ -184,7 +184,7 @@ export default function Navbar() {
             <button
               key={label}
               onClick={() => handleNavClick(href)}
-              className={`text-left font-mono text-sm tracking-wide transition-colors duration-300 ${
+              className={`text-left font-sans text-sm tracking-wide transition-colors duration-300 ${
                 isDark
                   ? "text-gray-300 hover:text-[color:var(--accent)]"
                   : "text-zinc-600 hover:text-[color:var(--accent)]"

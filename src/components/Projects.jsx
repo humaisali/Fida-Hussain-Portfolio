@@ -1,3 +1,5 @@
+// Project Section
+
 import { useEffect, useRef, useState } from "react";
 import { useTheme } from "../context/ThemeContext";
 
@@ -200,7 +202,7 @@ function ProjectCard({ project, isDark, delay = 0 }) {
         />
         {/* Industry badge */}
         <div
-          className="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider flex items-center gap-1.5"
+        className="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[10px] font-sans uppercase tracking-wider flex items-center gap-1.5"
           style={{
             background: isDark ? "rgba(0,0,0,0.75)" : "rgba(255,255,255,0.85)",
             border: "1px solid rgba(80,200,120,0.3)",
@@ -218,7 +220,7 @@ function ProjectCard({ project, isDark, delay = 0 }) {
 
         {/* Client + Title */}
         <div>
-          <p className={`text-xs font-mono uppercase tracking-widest mb-1 ${isDark ? "text-gray-600" : "text-zinc-400"}`}>
+          <p className={`text-xs font-sans uppercase tracking-widest mb-1 ${isDark ? "text-gray-600" : "text-zinc-400"}`}>
             Client: <span style={{ color: "var(--accent)" }}>{client}</span>
           </p>
           <h3 className={`text-lg font-semibold leading-snug ${isDark ? "text-white" : "text-zinc-900"}`}>
@@ -237,7 +239,7 @@ function ProjectCard({ project, isDark, delay = 0 }) {
             ${isDark ? "bg-zinc-900/60" : "bg-zinc-50"}
             border border-[rgba(80,200,120,0.15)]`}
         >
-          <p className={`text-[10px] font-mono uppercase tracking-widest mb-0.5 ${isDark ? "text-gray-600" : "text-zinc-400"}`}>
+          <p className={`text-[10px] font-sans uppercase tracking-widest mb-0.5 ${isDark ? "text-gray-600" : "text-zinc-400"}`}>
             Results
           </p>
           {results.map((r, i) => (
@@ -255,7 +257,7 @@ function ProjectCard({ project, isDark, delay = 0 }) {
           {tags.map((tag, i) => (
             <span
               key={i}
-              className="text-[11px] px-3 py-1 rounded-full font-mono"
+              className="text-[11px] px-3 py-1 rounded-full font-sans"
               style={{
                 border: "1px solid rgba(80,200,120,0.35)",
                 color: "var(--accent)",
@@ -373,7 +375,7 @@ export default function Projects() {
             transition: "opacity 0.6s ease-out 0.5s",
           }}
         >
-          <p className={`text-sm mb-5 font-mono ${isDark ? "text-gray-500" : "text-zinc-500"}`}>
+          <p className={`text-sm mb-5 font-sans ${isDark ? "text-gray-500" : "text-zinc-500"}`}>
             Have a project in mind?
           </p>
           <button

@@ -151,12 +151,12 @@ function StatBadge({ value, label, isDark }) {
       }}
     >
       <span
-        className="font-mono text-2xl font-bold"
+        className="font-sans text-2xl font-bold"
         style={{ color: "var(--accent)", textShadow: "0 0 12px rgba(80,200,120,0.5)" }}
       >
         {value}
       </span>
-      <span className={`text-xs mt-1 tracking-wide font-mono uppercase ${isDark ? "text-gray-500" : "text-zinc-500"}`}>
+      <span className={`text-xs mt-1 tracking-wide font-sans uppercase ${isDark ? "text-gray-500" : "text-zinc-500"}`}>
         {label}
       </span>
     </div>
@@ -316,11 +316,11 @@ export default function Hero() {
 
             {/* Typewriter role */}
             <div className="flex items-center h-8 gap-2">
-              <span className={`font-mono text-sm ${isDark ? "text-gray-500" : "text-zinc-400"}`}>
+              <span className={`font-sans text-sm ${isDark ? "text-gray-500" : "text-zinc-400"}`}>
                 I am a
               </span>
               <span
-                className="font-mono text-sm font-medium"
+                className="font-sans text-sm font-medium"
                 style={{ color: "var(--accent)" }}
               >
                 {typedRole}
@@ -375,7 +375,7 @@ export default function Hero() {
               
               {/* Social Links */}
               <div className="flex items-center gap-3 pt-1">
-                <span className={`text-xs font-mono ${isDark ? "text-gray-600" : "text-zinc-400"}`}>
+                <span className={`text-xs font-sans ${isDark ? "text-gray-600" : "text-zinc-400"}`}>
                   Connect
                 </span>
                 <span
@@ -451,7 +451,7 @@ export default function Hero() {
                 {/* Initials fallback — shown if image fails to load */}
                 <div className="initials-fallback hidden absolute inset-0 items-center justify-center flex-col gap-1">
                   <span
-                    className="font-mono text-5xl font-bold lg:text-6xl"
+                    className="font-sans text-5xl font-bold lg:text-6xl"
                     style={{
                       color: "var(--accent)",
                       textShadow: "0 0 24px rgba(80,200,120,0.6)",
@@ -460,7 +460,7 @@ export default function Hero() {
                     FH
                   </span>
                   <span
-                    className={`text-xs font-mono tracking-[0.15em] uppercase
+                    className={`text-xs font-sans tracking-[0.15em] uppercase
                       ${isDark ? "text-gray-600" : "text-zinc-400"}`}
                   >
                     Copywriter
@@ -479,7 +479,7 @@ export default function Hero() {
 
               {/* Floating badge — Location */}
               <div
-                className={`absolute -bottom-3 -left-4 px-3 py-1.5 rounded-lg text-xs font-mono
+              className={`absolute -bottom-3 -left-4 px-3 py-1.5 rounded-lg text-xs font-sans
                   ${isDark ? "bg-zinc-900 text-gray-300" : "bg-white text-zinc-700"}
                   border border-[rgba(80,200,120,0.25)]`}
                 style={{
@@ -492,7 +492,7 @@ export default function Hero() {
 
               {/* Floating badge — Available */}
               <div
-                className={`absolute -top-3 -right-4 px-3 py-1.5 rounded-lg text-xs font-mono flex items-center gap-1.5
+                className={`absolute -top-3 -right-4 px-3 py-1.5 rounded-lg text-xs font-sans flex items-center gap-1.5
                   ${isDark ? "bg-zinc-900 text-gray-300" : "bg-white text-zinc-700"}
                   border border-[rgba(80,200,120,0.25)]`}
                 style={{
@@ -525,9 +525,9 @@ export default function Hero() {
             opacity: visible ? 1 : 0,
             transition: "opacity 1s ease-out 0.8s",
           }}
-        >
+          >
           <span
-            className={`text-xs font-mono tracking-widest uppercase
+            className={`text-xs font-sans tracking-widest uppercase
               ${isDark ? "text-gray-600" : "text-zinc-400"}`}
           >
             Scroll

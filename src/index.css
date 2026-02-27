@@ -98,7 +98,7 @@
 
   /* Section label */
   .section-label {
-    @apply uppercase tracking-[0.2em] text-sm font-mono font-medium;
+    @apply uppercase tracking-[0.2em] text-sm font-sans font-medium;
     color: var(--accent);
   }
 

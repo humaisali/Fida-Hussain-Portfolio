@@ -101,7 +101,7 @@ function ContactCard({ icon, label, value, href, isDark, delay = 0 }) {
       </div>
 
       <div className="flex flex-col min-w-0">
-        <span className={`text-[11px] font-mono uppercase tracking-widest ${isDark ? "text-gray-600" : "text-zinc-400"}`}>
+        <span className={`text-[11px] font-sans uppercase tracking-widest ${isDark ? "text-gray-600" : "text-zinc-400"}`}>
           {label}
         </span>
         <span className={`text-sm font-medium truncate mt-0.5
@@ -136,7 +136,7 @@ function FormField({ label, id, type = "text", placeholder, value, onChange, isD
     <div className="flex flex-col gap-1.5">
       <label
         htmlFor={id}
-        className={`text-xs font-mono uppercase tracking-widest ${isDark ? "text-gray-500" : "text-zinc-500"}`}
+        className={`text-xs font-sans uppercase tracking-widest ${isDark ? "text-gray-500" : "text-zinc-500"}`}
       >
         {label}{required && <span style={{ color: "var(--accent)" }}> *</span>}
       </label>
@@ -313,18 +313,18 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="flex flex-col gap-5">
                 <div className="grid gap-5 sm:grid-cols-2">
                   <FormField
-                    id="name" label="Your Name" placeholder="John Doe"
+                    id="name" label="Your Name" 
                     value={form.name} onChange={handleChange("name")}
                     isDark={isDark} required
                   />
                   <FormField
-                    id="email" label="Email Address" type="email" placeholder="you@example.com"
+                    id="email" label="Email Address" type="email"
                     value={form.email} onChange={handleChange("email")}
                     isDark={isDark} required
                   />
                 </div>
                 <FormField
-                  id="subject" label="Subject" placeholder="Project inquiry / Collaboration"
+                  id="subject" label="Subject" 
                   value={form.subject} onChange={handleChange("subject")}
                   isDark={isDark} required
                 />
@@ -385,7 +385,7 @@ export default function Contact() {
                   style={{ background: "var(--accent)", boxShadow: "0 0 8px rgba(80,200,120,0.9)" }}
                 />
                 <span
-                  className="font-mono text-xs"
+                  className="font-sans text-xs"
                   style={{ color: "var(--accent)" }}
                 >
                   Available for new projects
@@ -416,7 +416,7 @@ export default function Contact() {
                 className="flex-shrink-0 text-lg"
                 role="img" aria-label="clock"
               >⏱️</span>
-              <p className={`text-xs font-mono ${isDark ? "text-gray-500" : "text-zinc-500"}`}>
+              <p className={`text-xs font-sans ${isDark ? "text-gray-500" : "text-zinc-500"}`}>
                 Typical response time:{" "}
                 <span style={{ color: "var(--accent)" }}>within 24 hours</span>
               </p>

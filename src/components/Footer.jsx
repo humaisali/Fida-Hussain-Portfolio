@@ -38,7 +38,7 @@ const HeartIcon = () => (
 
 // ── Nav sections for footer links ──
 const FOOTER_LINKS = [
-  { label: "Hero",         href: "#hero" },
+  { label: "Home",         href: "#hero" },
   { label: "About",        href: "#about" },
   { label: "Skills",       href: "#skills" },
   { label: "Projects",     href: "#projects" },
@@ -113,13 +113,13 @@ export default function Footer() {
             {/* Logo */}
             <div>
               <span
-                className="font-mono text-2xl font-bold tracking-tight"
+                className="font-sans text-2xl font-bold tracking-tight"
                 style={{ color: "var(--accent)", textShadow: "0 0 14px rgba(80,200,120,0.5)" }}
               >
                 FH
                 <span className="text-white">.copy</span>
               </span>
-              <p className="mt-1 font-mono text-xs tracking-wide text-gray-500">
+              <p className="mt-1 font-sans text-xs tracking-wide text-gray-500">
                 Professional Copywriter
               </p>
             </div>
@@ -134,7 +134,7 @@ export default function Footer() {
                 className="flex-shrink-0 w-2 h-2 rounded-full animate-pulse"
                 style={{ background: "var(--accent)", boxShadow: "0 0 8px rgba(80,200,120,0.9)" }}
               />
-              <span className="font-mono text-xs text-gray-500">
+              <span className="font-sans text-xs text-gray-500">
                 Available for new projects
               </span>
             </div>
@@ -163,7 +163,7 @@ export default function Footer() {
           {/* Col 2 — Quick Nav */}
           <div className="flex flex-col gap-4">
             <h4
-              className="text-xs font-mono uppercase tracking-[0.2em] mb-1"
+              className="text-xs font-sans uppercase tracking-[0.2em] mb-1"
               style={{ color: "var(--accent)" }}
             >
               Navigation
@@ -173,7 +173,7 @@ export default function Footer() {
                 <button
                   key={label}
                   onClick={() => scrollTo(href)}
-                  className="flex items-center gap-2 font-mono text-sm text-left text-gray-400 transition-all duration-300 hover:text-white group w-fit"
+                  className="flex items-center gap-2 font-sans text-sm text-left text-gray-400 transition-all duration-300 hover:text-white group w-fit"
                 >
                   <span
                     className="flex-shrink-0 w-0 h-px transition-all duration-300 group-hover:w-4"
@@ -188,7 +188,7 @@ export default function Footer() {
           {/* Col 3 — Services */}
           <div className="flex flex-col gap-4">
             <h4
-              className="text-xs font-mono uppercase tracking-[0.2em] mb-1"
+              className="text-xs font-sans uppercase tracking-[0.2em] mb-1"
               style={{ color: "var(--accent)" }}
             >
               Services
@@ -200,7 +200,7 @@ export default function Footer() {
                     className="w-1.5 h-1.5 rounded-full flex-shrink-0"
                     style={{ background: "rgba(80,200,120,0.5)", boxShadow: "0 0 4px rgba(80,200,120,0.6)" }}
                   />
-                  <span className="font-mono text-sm text-gray-400">{service}</span>
+                  <span className="font-sans text-sm text-gray-400">{service}</span>
                 </li>
               ))}
             </ul>
@@ -209,7 +209,7 @@ export default function Footer() {
           {/* Col 4 — CTA card */}
           <div className="flex flex-col gap-4">
             <h4
-              className="text-xs font-mono uppercase tracking-[0.2em] mb-1"
+              className="text-xs font-sans uppercase tracking-[0.2em] mb-1"
               style={{ color: "var(--accent)" }}
             >
               Start a Project
@@ -242,7 +242,7 @@ export default function Footer() {
 
               <div className="flex items-center gap-2 border-t border-[rgba(80,200,120,0.1)] pt-3">
                 <span className="text-lg">⏱️</span>
-                <span className="font-mono text-xs text-gray-600">
+                <span className="font-sans text-xs text-gray-600">
                   Responds within{" "}
                   <span style={{ color: "var(--accent)" }}>24 hours</span>
                 </span>
@@ -263,7 +263,7 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
 
           {/* Copyright */}
-          <p className="font-mono text-xs text-center text-gray-600 sm:text-left">
+          <p className="font-sans text-xs text-center text-gray-600 sm:text-left">
             © {year}{" "}
             <span className="text-gray-400">Fida Hussain</span>
             {" "}—{" "}
@@ -272,13 +272,9 @@ export default function Footer() {
           </p>
 
           {/* Made with */}
-          <p className="text-xs font-mono text-gray-700 flex items-center gap-1.5">
-            Crafted with{" "}
-            <span style={{ color: "var(--accent)" }}>
-              <HeartIcon />
-            </span>
-            {" "}&{" "}
-            <span style={{ color: "var(--accent)" }}>precision</span>
+          <p className="text-xs font-sans text-gray-700 flex items-center gap-1.5">
+            Design and Developed by{" "}
+            <span style={{ color: "var(--accent)" }}>Humais Ali</span>
           </p>
 
         </div>

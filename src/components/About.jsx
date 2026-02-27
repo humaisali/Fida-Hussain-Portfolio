@@ -88,12 +88,12 @@ function StatCounter({ target, suffix, label, isDark, delay = 0 }) {
       onMouseLeave={(e) => { e.currentTarget.style.boxShadow = "0 0 18px rgba(80,200,120,0.07)"; }}
     >
       <span
-        className="font-mono text-3xl font-bold"
+        className="font-sans text-3xl font-bold"
         style={{ color: "var(--accent)", textShadow: "0 0 14px rgba(80,200,120,0.5)" }}
       >
         {count}{suffix}
       </span>
-      <span className={`text-xs font-mono mt-1 tracking-wide uppercase text-center ${isDark ? "text-gray-500" : "text-zinc-500"}`}>
+      <span className={`text-xs font-sans mt-1 tracking-wide uppercase text-center ${isDark ? "text-gray-500" : "text-zinc-500"}`}>
         {label}
       </span>
     </div>
